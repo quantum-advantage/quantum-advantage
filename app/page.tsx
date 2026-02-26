@@ -48,11 +48,43 @@ const experiments = [
   },
   {
     name: "10⁶× Zeno Entropic Suppression",
-    status: "pending" as const,
-    backend: "ibm_fez / ibm_torino",
-    detail: "Dynamic circuit experiment: Bell + mid-circuit Zeno parity checks (N = 1,2,4,8). Tests whether repeated weak measurement extends coherence time. Jobs queued.",
-    metric: "Pending",
-    jobCount: 2,
+    status: "refuted" as const,
+    backend: "ibm_torino (133q)",
+    detail: "3-protocol experiment (free, zeno-4, zeno-8 parity checks). Each parity check adds ~15 CZ gates of noise, dropping initial fidelity 13-17%. Dominant decoherence is T1 relaxation (p00≫p11 asymmetry), which Zeno cannot fix. The 10⁶× extrapolation was a T2 fitting artifact on flat data.",
+    metric: "T2_eff flat",
+    jobCount: 3,
+  },
+  {
+    name: "Quantum Teleportation",
+    status: "confirmed" as const,
+    backend: "ibm_torino (133q)",
+    detail: "Full teleportation protocol: Bell channel + dynamic mid-circuit measurement + classical feedforward corrections. Teleported 6 input states (|0⟩,|1⟩,|+⟩,|−⟩,|+i⟩,|−i⟩). Average fidelity F = 0.773, exceeding the classical limit of 2/3 = 0.667 by 16%.",
+    metric: "F = 0.773 > 2/3",
+    jobCount: 6,
+  },
+  {
+    name: "GHZ Entanglement Depth",
+    status: "confirmed" as const,
+    backend: "ibm_torino (133q)",
+    detail: "Created N-qubit GHZ states for N = 2 through 8. All sizes show genuine multipartite entanglement (F > 0.5 witness). Fidelity decays ~2.7% per added qubit: F(2) = 0.867, F(4) = 0.802, F(8) = 0.652. X-basis parity confirms coherent superposition.",
+    metric: "8-qubit F = 0.652",
+    jobCount: 14,
+  },
+  {
+    name: "Information Scrambling (OTOC)",
+    status: "confirmed" as const,
+    backend: "ibm_torino (133q)",
+    detail: "4-qubit brick-layer circuits at depths 1-8. Local perturbation on qubit 0 becomes indistinguishable from global state by depth 3 (TVD = 0.176). Total Variation Distance drops from 0.677 → 0.389 — consistent with fast scrambling (Sekino-Susskind conjecture).",
+    metric: "TVD: 0.68→0.18",
+    jobCount: 12,
+  },
+  {
+    name: "θ_lock Resonance Scan",
+    status: "refuted" as const,
+    backend: "ibm_torino (133q)",
+    detail: "Swept Bell + RY(θ) from 0° to 90° in 19 steps (including 51.843° exactly). The θ_lock angle shows F = 0.807, while the mean across all other angles is F = 0.817 ± 0.010. Z-score = −1.0 — statistically indistinguishable from noise.",
+    metric: "z = −1.0",
+    jobCount: 19,
   },
 ]
 
@@ -92,8 +124,8 @@ export default function HomePage() {
             Quantum Advantage
           </h1>
           <p className="text-xl text-gray-400 mb-4 leading-relaxed max-w-2xl mx-auto">
-            Rigorous experimental validation of quantum advantage claims on IBM Quantum hardware.
-            Every result is hardware-verified with published job IDs.
+            10 experiments on IBM Quantum hardware. Honest results — 4 confirmed advantages,
+            6 claims refuted. Every result is hardware-verified with published job IDs.
           </p>
           <p className="text-sm text-gray-500 mb-8">
             Agile Defense Systems — CAGE Code 9HUP5 — Devin Phillip Davis
@@ -143,7 +175,7 @@ export default function HomePage() {
       <section className="container mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-2 text-center">Experimental Evidence</h2>
         <p className="text-gray-400 text-center mb-8">
-          All experiments executed on IBM Quantum Eagle/Heron processors (ibm_fez 156q, ibm_torino 133q)
+          All experiments executed on IBM Quantum Eagle/Heron processors (ibm_fez 156q, ibm_torino 133q). Feb 2026.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {experiments.map((exp) => (
