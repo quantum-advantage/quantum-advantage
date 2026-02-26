@@ -1,0 +1,16 @@
+{
+  "sdk_version": "NCCT-v2.1-OSIRIS",
+  "capabilities": [
+    "zero_knowledge_completion",
+    "swarm_code_gen",
+    "dna_lang_transpile",
+    "umip_standard",
+    "hacker_resistant_mode"
+  ],
+  "anchors": {
+    "lambda": "e7db45bb0255bcdc0ffca935e12cf40f9c5e677401521eef1fe36f9a8de9da94",
+    "theta_lock": "8a2adfb5ac2b5b9065d5bce6d4cd9ff138b276f2628d315fb9ba5cd238bdca54",
+    "phi_resonance": "PhgCHfxaOpmL3OfBTWrr8H36cKtqDipUtcaj7fI/mQhIKmOPfvUbciTE"
+  },
+  "genesis_manifest": "UMIP_v2.0_SOVEREIGN"
+}

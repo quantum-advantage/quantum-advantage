@@ -1,0 +1,21 @@
+{
+  "github.copilot.advanced": {
+    "mcpServers": {
+      "dnalang": {
+        "command": "/home/devinpd/Desktop/dnalang/copilot-integration/start_copilot_agent.sh",
+        "args": [],
+        "env": {
+          "QUANTUM_ADVANTAGE_API": "https://quantum-advantage.dev/api",
+          "IBM_QUANTUM_TOKEN": "99ezCffRM-zVWhRhJr4N3RQWLrVgZKGcJckZXEzehSQK",
+          "VERCEL_TOKEN": "IYsd8rfE1zjga1TcKfh0TxCW",
+          "COCKPIT_IP": "192.168.1.204",
+          "FOLD_IP": "192.168.1.63",
+          "LAMBDA_PHI": "2.176435e-8",
+          "THETA_LOCK": "51.843",
+          "PHI_THRESHOLD": "0.7734",
+          "GAMMA_CRITICAL": "0.3"
+        }
+      }
+    }
+  }
+}

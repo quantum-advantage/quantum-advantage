@@ -1,0 +1,9 @@
+{
+  "repo": "https://github.com/ENKI-420/quantum-advantage",
+  "target": "AGM-193",
+  "phase": "IND",
+  "dfars": "15.6-compliant",
+  "phi_target": 0.7734,
+  "lambda": 0.9700,
+  "org": "Agile_Defense_9HUP5"
+}

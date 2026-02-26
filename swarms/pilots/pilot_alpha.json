@@ -1,0 +1,11 @@
+{
+  "agent_id": "PILOT_ALPHA",
+  "mode": "BIO_PHARMA_MAPPING",
+  "geometry": "TETRAHEDRAL",
+  "frequency_lock": "LENOIRE_432HZ",
+  "tasks": [
+    "Map_Silo_Interoperability",
+    "Analog_Coherent_Longevity_Scan"
+  ],
+  "resonance": 0.7734
+}

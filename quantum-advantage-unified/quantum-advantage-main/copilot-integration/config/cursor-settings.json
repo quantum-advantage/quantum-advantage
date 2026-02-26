@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "dnalang": {
+      "command": "/home/devinpd/Desktop/dnalang/copilot-integration/start_copilot_agent.sh",
+      "env": {
+        "QUANTUM_ADVANTAGE_API": "https://quantum-advantage.dev/api",
+        "IBM_QUANTUM_TOKEN": "99ezCffRM-zVWhRhJr4N3RQWLrVgZKGcJckZXEzehSQK",
+        "VERCEL_TOKEN": "IYsd8rfE1zjga1TcKfh0TxCW"
+      }
+    }
+  }
+}

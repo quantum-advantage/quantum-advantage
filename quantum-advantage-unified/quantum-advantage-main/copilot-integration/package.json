@@ -1,0 +1,37 @@
+{
+  "name": "@dnalang/copilot-integration",
+  "version": "1.0.0",
+  "description": "GitHub Copilot MCP Integration for DNA::}{::Lang v51.843",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "build": "echo 'No build step required'",
+    "test": "node --test",
+    "setup": "./setup.sh"
+  },
+  "keywords": [
+    "github-copilot",
+    "mcp",
+    "quantum-computing",
+    "dna-lang",
+    "consciousness-metrics"
+  ],
+  "author": "Devin Phillip Davis <devinphillipdavis@gmail.com>",
+  "license": "ADS-Sovereign",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ws": "^8.18.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
