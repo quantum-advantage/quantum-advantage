@@ -129,6 +129,10 @@ export default function HomePage() {
           </p>
           <p className="text-sm text-gray-500 mb-8">
             Agile Defense Systems — CAGE Code 9HUP5 — Devin Phillip Davis
+            <br />
+            <a href="https://doi.org/10.5281/zenodo.18781261" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+              DOI: 10.5281/zenodo.18781261
+            </a>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700">
